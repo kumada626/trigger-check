@@ -25,8 +25,8 @@ jobs:
     requires: hub
     steps:
       - check: |
-          CHECK=$(meta get parameters.check)
-          if [ "$CHECK" = "0" ]; then exit 1; fi
+          export CHECK=`meta get parameters.check`
+          if [ "${CHECK}" = "0" ]; then exit 1; fi
       - echo: echo hub
   TARGET:
     requires: [A,B,C,D]
