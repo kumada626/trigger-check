@@ -25,7 +25,7 @@ jobs:
     requires: hub
     steps:
       - check: |
-          export CHECK=`meta get parameters.check`
+          export CHECK=`meta get parameters.check.value`
           if "${CHECK}"; then exit 1; fi
       - echo: echo hub
   TARGET:
