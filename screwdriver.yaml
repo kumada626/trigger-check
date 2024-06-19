@@ -12,6 +12,7 @@ jobs:
   A:
     requires: hub
     steps:
+      - wait: sleep 100
       - echo: echo hub
   B:
     requires: hub
